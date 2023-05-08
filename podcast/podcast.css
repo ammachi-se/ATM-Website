@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.cdnfonts.com/css/mattone');
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Familjen Grotesk';
+    text-transform: uppercase;
+    background-color: #F5F5F5;
+    box-sizing: border-box;
+    color: #201B1B;
+
+}
+
+.canevas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    position: relative;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+/* Navbar */
+
+.navbar {
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.logo {
+    margin-top: 1%;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-text {
+    font-family: 'Mattone';
+    font-size: 55%;
+    margin-right: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-line {
+    background: #201B1B;
+    height: 4px;
+    width: 30px;
+    border-radius: 5px;
+}
+
+.navbar-menu:hover .menu-text {
+    font-size: 50%;
+}
+
+.navbar-menu:hover .menu-btn {
+    gap: 6px;
+    border-radius: 50%;
+    background: rgb(230, 230, 230);
+}
+
+
+
+/* Podcast */
+
+.podcast-title {
+    text-align: center;
+}
+
+.podcast-title h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.podcast-title :nth-child(1) {
+    font-size: 2vw;
+    font-weight: 600;
+    font-family: 'Mattone';
+}
+
+.podcast-title :nth-child(2) {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.podcast-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.podcast-img img {
+    width: 30%;
+}

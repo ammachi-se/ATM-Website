@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.cdnfonts.com/css/mattone');
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  color: #201B1B;
+  font-family: 'Familjen Grotesk';
+  text-transform: uppercase;
+  background-color: #F5F5F5;
+}
+
+.canevas {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  height: 100vh;
+}
+
+/* Navbar */
+
+.navbar {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #201B1B;
+}
+
+.align-items {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  margin-top: 1%;
+}
+
+/* Acc */
+
+
+p,
+h1 {
+  margin: 0;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.text-left {
+  font-size: 0.7rem;
+  width: 20%;
+  margin-bottom: 8px;
+}
+
+.title-text {
+  font-family: 'Mattone';
+  font-size: 2vw;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 16%;
+
+}
+
+.about-content-text {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+
+/* Acc */
+
+
+.acc-block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  align-items: center;
+  border-bottom: 1px solid #201B1B;
+  cursor: pointer;
+  position: relative;
+}
+
+
+.acc-toggle-icon {
+  color: #201B1B;
+}
+
+.acc-title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+ul {
+  padding: 0;
+  display: flex;
+}
+
+
+ul li {
+  padding: 4px 0;
+  list-style: none;
+  font-size: 15px;
+}
+
+li:first-child {
+  padding-top: 40px;
+}
+
+li:last-child {
+  border-bottom: 1px solid #201B1B;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 900px) {
+  .acc-block {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  ul li {
+    font-size: 20px;
+  }
+
+  li:first-child {
+    padding-top: 10px;
+  }
+
+  li:last-child {
+    padding-bottom: 10px;
+  }
+}
+
+[data-collapsible] {
+  cursor: pointer;
+}
+
+.heightZero {
+  height: 0;
+}
+
+
+/* galerie grid */
+
+.angry-grid {
+  display: grid;
+
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  gap: 0px;
+  height: 100%;
+  margin-left: 15%;
+  margin-right: 2.5%;
+
+}
+
+.img-grid {
+  position: relative;
+}
+
+.img-path{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #201b1b6b;
+  border-radius: 5px;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transition: clip-path 0.5s ease-in-out;
+}
+
+.img-grid:hover > .img-path{
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
+
+.img-text{
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #F5F5F5;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.7s ease-in-out;
+}
+
+.img-grid:hover > .img-text{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.img-text1{
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  font-size: 0.8rem;
+  color: #F5F5F5;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 1s ease-in-out;
+}
+
+.img-grid:hover > .img-text1{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+#item-0 {
+
+  background-image: url(/img/techno2.jpg);
+  background-size: cover;
+  margin: 10px;
+  border-radius: 5px;
+
+  grid-row-start: 1;
+  grid-column-start: 1;
+
+  grid-row-end: 2;
+  grid-column-end: 3;
+
+}
+
+#item-1 {
+
+  background-image: url(/img/techno3.jpg);
+  background-size: cover;
+  margin: 10px;
+  border-radius: 5px;
+
+  grid-row-start: 1;
+  grid-column-start: 3;
+
+  grid-row-end: 2;
+  grid-column-end: 4;
+
+}
+
+#item-2 {
+
+  background-image: url(/img/techno4.jpg);
+  background-size: cover;
+  margin: 10px;
+  border-radius: 5px;
+
+  grid-row-start: 1;
+  grid-column-start: 4;
+
+  grid-row-end: 2;
+  grid-column-end: 6;
+
+}
+
+#item-3 {
+
+  background-image: url(/img/techno5.jpg);
+  background-size: cover;
+  margin: 10px;
+  border-radius: 5px;
+
+  grid-row-start: 2;
+  grid-column-start: 1;
+
+  grid-row-end: 3;
+  grid-column-end: 2;
+
+}
+
+#item-4 {
+
+  background-image: url(/img/techno6.jpg);
+  background-size: cover;
+  margin: 10px;
+  border-radius: 5px;
+
+  grid-row-start: 2;
+  grid-column-start: 2;
+
+  grid-row-end: 3;
+  grid-column-end: 4;
+
+}
+
+#item-5 {
+
+  background-image: url(/img/techno7.jpg);
+  background-size: cover;
+  margin: 10px;
+  border-radius: 5px;
+
+  grid-row-start: 2;
+  grid-column-start: 4;
+
+  grid-row-end: 3;
+  grid-column-end: 6;
+
+}
+
+#item-6 {
+
+  background-image: url(/img/techno8.jpg);
+  background-size: cover;
+  margin: 10px;
+  border-radius: 5px;
+
+  grid-row-start: 3;
+  grid-column-start: 1;
+
+  grid-row-end: 4;
+  grid-column-end: 3;
+
+}
+
+#item-7 {
+
+  background-image: url(/img/naturatek.jpg);
+  background-size: cover;
+  margin: 10px;
+  border-radius: 5px;
+
+  grid-row-start: 3;
+  grid-column-start: 3;
+
+  grid-row-end: 4;
+  grid-column-end: 5;
+
+}
+
+#item-8 {
+
+  background-image: url(/img/techno.jpg);
+  background-size: cover;
+  margin: 10px;
+  border-radius: 5px;
+
+  grid-row-start: 3;
+  grid-column-start: 5;
+
+  grid-row-end: 4;
+  grid-column-end: 6;
+
+}
