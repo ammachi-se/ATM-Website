@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.cdnfonts.com/css/mattone');
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Familjen Grotesk';
+    text-transform: uppercase;
+    background-color: #F5F5F5;
+    color: #201B1B;
+    box-sizing: border-box;
+}
+
+p,
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #201B1B;
+    color: #F5F5F5;
+    z-index: 9;
+    font-family: 'Mattone';
+    box-sizing: border-box;
+}
+
+.navigation-content {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+
+.navigation-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+}
+
+.navigation-img {
+    width: 20vw;
+    height: 40vh;
+    background-image: url(/img/elec.jpg);
+    background-size: cover;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    transition: clip-path 1s;
+}
+
+.word {
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all 0.5s ease-in-out;
+}
+
+.navigation-medias {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    cursor: pointer;
+    color: #F5F5F5;
+    font-size: 0.6rem;
+    gap: 5px;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.navigation-medias a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #F5F5F5;
+}
+
+
+.navigation ul {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.navigation ul li {
+    list-style: none;
+    font-size: 4vw;
+    font-weight: 600;
+    padding: 5px;
+
+
+}
+
+.navigation ul a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #F5F5F5;
+}
+
+.navigation p {
+    font-size: 0.8rem;
+}
+
+.navigation-text {
+    font-family: 'Familjen Grotesk';
+    font-size: 0.6rem;
+}
+
+
+
+
+/* Navbar */
+
+.navbar {
+    height: 20%;
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.logo {
+    margin-top: 1%;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-text {
+    font-family: 'Mattone';
+    font-size: 55%;
+    margin-right: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-line {
+    background: #201B1B;
+    height: 4px;
+    width: 30px;
+    border-radius: 5px;
+}
+
+.navbar-menu:hover .menu-text {
+    font-size: 50%;
+}
+
+.navbar-menu:hover .menu-btn {
+    gap: 6px;
+    border-radius: 50%;
+    background: rgb(230, 230, 230);
+}
+
+
+
+/* Title */
+
+
+.title {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    height: 90vh;
+}
+
+.title-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.title-text h1 {
+    font-family: 'Mattone';
+    font-size: 10vw;
+}
+
+.title-text p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-right: 100px;
+}
+
+.content {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.content-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    flex-basis: 35%;
+    font-size: 0.9rem;
+}
+
+.content-left1 a {
+    cursor: pointer;
+    color: #201B1B;
+}
+
+.content-right {
+    display: flex;
+    align-items: center;
+    flex-basis: 65%;
+}
+
+.content-right p {
+    font-family: 'Mattone';
+    font-size: 2.7vw;
+    font-weight: 600;
+    text-indent: 50px;
+}
+
+
+/* Form */
+
+.form {
+    margin-left: 30%;
+    margin-right: 2.5%;
+}
+
+form {
+    font-size: 0.8rem;
+}
+
+.form-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+label {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+textarea {
+    height: 200px;
+}
+
+.button-flex {
+    display: flex;
+    justify-content: end;
+}
+
+input[type="submit"] {
+    font-family: 'Familjen Grotesk';
+    font-size: 0.8rem;
+    background-color: #201B1B;
+    color: #F5F5F5;
+    border-radius: 5px;
+    box-shadow: none;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+.input-container label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+}
+
+.input-container input[type="text"],
+.input-container input[type="email"] {
+    padding-left: 10px;
+    padding-top: 10px;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: solid 1px #aaa;
+    background: #F5F5F5;
+    font-family: 'Familjen Grotesk';
+    font-size: 0.8rem;
+
+}
+
+.input-container textarea {
+    padding-left: 10px;
+    padding-top: 20px;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: solid 1px #aaa;
+    background: #F5F5F5;
+    font-family: 'Familjen Grotesk';
+    font-size: 0.8rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+
+.input-container input[type="text"]:focus+label,
+.input-container input[type="email"]:focus+label,
+.input-container textarea:focus+label,
+.input-container input[type="text"]:not(:placeholder-shown)+label,
+.input-container input[type="email"]:not(:placeholder-shown)+label,
+.input-container textarea:not(:placeholder-shown)+label {
+    top: 10px;
+    color: #161313;
+}

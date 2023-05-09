@@ -115,13 +115,28 @@ h1 {
 ul {
   padding: 0;
   display: flex;
+  flex-direction: row;
+}
+
+.text{
+  flex-basis: 50%;
+}
+
+.img{
+  flex-basis: 50%;
+  background: url(/img/3abdelkader.png) 50% 50% no-repeat;
+  margin: 5px;
+}
+
+span{
+  font-weight: bold;
 }
 
 
 ul li {
   padding: 4px 0;
   list-style: none;
-  font-size: 15px;
+  font-size: 0.9rem;
 }
 
 li:first-child {
@@ -129,7 +144,7 @@ li:first-child {
 }
 
 li:last-child {
-  border-bottom: 1px solid #201B1B;
+  
   padding-bottom: 40px;
 }
 
