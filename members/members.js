@@ -36,3 +36,32 @@ let tl = gsap.timeline({
 });
 
 
+
+
+
+// --------Animation des titres
+
+// Récupérez toutes les images que vous souhaitez animer
+const images = document.querySelectorAll('.content-section-right img');
+
+// Récupérez la liste de titres
+const titles = document.querySelectorAll('.content-section-left ul li');
+
+// Ajoutez un écouteur d'événement sur le hover pour chaque titre
+titles.forEach((title, index) => {
+  title.addEventListener('mouseover', () => {
+    // Changez l'opacité de toutes les images en fonction de l'index du titre survolé
+    images.forEach((image, imageIndex) => {
+      image.style.opacity = imageIndex === index ? '1' : '0';
+    });
+  });
+});
+
+// Ajoutez un écouteur d'événement pour le mouseleave sur la liste de titres
+document.querySelector('.content-section-left ul').addEventListener('mouseleave', () => {
+  // Réinitialisez l'opacité de toutes les images à 0
+  images.forEach((image) => {
+    image.style.opacity = '0';
+  });
+});
+

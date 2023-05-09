@@ -48,7 +48,7 @@ body {
   margin-top: 1%;
 }
 
-/* Acc */
+/* Content */
 
 
 p,
@@ -56,37 +56,76 @@ h1 {
   margin: 0;
 }
 
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  margin-top: 20px;
-  margin-bottom: 40px;
+.content {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  height: 90vh;
 }
 
-.text-left {
+.content-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.content-section-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 50%;
+}
+
+.content-section-left-text {
   font-size: 0.7rem;
-  width: 20%;
-  margin-bottom: 8px;
+  font-weight: 400;
+  width: 60%;
+  margin-top: 20%;
+
 }
 
-.title-text {
-  font-family: 'Mattone';
-  font-size: 2vw;
-}
-
-.about-content {
+.content-section-left ul {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.content-section-left ul li {
+  font-family: 'Mattone';
+  font-size: 3vw;
+  font-weight: bolder;
+  cursor: pointer;
+  padding: 0;
+  width: fit-content;
+  color: #201b1b7a;
+  transition: all 0.5s ease;
+}
+
+.content-section-left ul li:hover {
+  color: #201B1B;
+  transform: translateX(10px);
+}
+
+.content-section-right {
+  display: flex;
+  flex-basis: 50%;
   justify-content: center;
-  align-items: center;
-  margin-left: 16%;
-
+  position: relative;
 }
 
-.about-content-text {
-  font-size: 0.8rem;
-  line-height: 1.2rem;
+.content-section-right img {
+  width: 100%;
+  height: 65%;
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
+
+
+
 
 /* Acc */
 
@@ -108,8 +147,8 @@ h1 {
 }
 
 .acc-title {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 ul {
@@ -118,17 +157,17 @@ ul {
   flex-direction: row;
 }
 
-.text{
+.text {
   flex-basis: 50%;
 }
 
-.img{
+.img {
   flex-basis: 50%;
   background: url(/img/3abdelkader.png) 50% 50% no-repeat;
   margin: 5px;
 }
 
-span{
+span {
   font-weight: bold;
 }
 
@@ -136,7 +175,7 @@ span{
 ul li {
   padding: 4px 0;
   list-style: none;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 li:first-child {
@@ -144,7 +183,7 @@ li:first-child {
 }
 
 li:last-child {
-  
+
   padding-bottom: 40px;
 }
 
@@ -173,210 +212,4 @@ li:last-child {
 
 .heightZero {
   height: 0;
-}
-
-
-/* galerie grid */
-
-.angry-grid {
-  display: grid;
-
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
-  gap: 0px;
-  height: 100%;
-  margin-left: 15%;
-  margin-right: 2.5%;
-
-}
-
-.img-grid {
-  position: relative;
-}
-
-.img-path{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #201b1b6b;
-  border-radius: 5px;
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-  transition: clip-path 0.5s ease-in-out;
-}
-
-.img-grid:hover > .img-path{
-  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
-}
-
-.img-text{
-  position: absolute;
-  bottom: 40px;
-  left: 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #F5F5F5;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.7s ease-in-out;
-}
-
-.img-grid:hover > .img-text{
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.img-text1{
-  position: absolute;
-  bottom: 20px;
-  left: 30px;
-  font-size: 0.8rem;
-  color: #F5F5F5;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 1s ease-in-out;
-}
-
-.img-grid:hover > .img-text1{
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-
-#item-0 {
-
-  background-image: url(/img/techno2.jpg);
-  background-size: cover;
-  margin: 10px;
-  border-radius: 5px;
-
-  grid-row-start: 1;
-  grid-column-start: 1;
-
-  grid-row-end: 2;
-  grid-column-end: 3;
-
-}
-
-#item-1 {
-
-  background-image: url(/img/techno3.jpg);
-  background-size: cover;
-  margin: 10px;
-  border-radius: 5px;
-
-  grid-row-start: 1;
-  grid-column-start: 3;
-
-  grid-row-end: 2;
-  grid-column-end: 4;
-
-}
-
-#item-2 {
-
-  background-image: url(/img/techno4.jpg);
-  background-size: cover;
-  margin: 10px;
-  border-radius: 5px;
-
-  grid-row-start: 1;
-  grid-column-start: 4;
-
-  grid-row-end: 2;
-  grid-column-end: 6;
-
-}
-
-#item-3 {
-
-  background-image: url(/img/techno5.jpg);
-  background-size: cover;
-  margin: 10px;
-  border-radius: 5px;
-
-  grid-row-start: 2;
-  grid-column-start: 1;
-
-  grid-row-end: 3;
-  grid-column-end: 2;
-
-}
-
-#item-4 {
-
-  background-image: url(/img/techno6.jpg);
-  background-size: cover;
-  margin: 10px;
-  border-radius: 5px;
-
-  grid-row-start: 2;
-  grid-column-start: 2;
-
-  grid-row-end: 3;
-  grid-column-end: 4;
-
-}
-
-#item-5 {
-
-  background-image: url(/img/techno7.jpg);
-  background-size: cover;
-  margin: 10px;
-  border-radius: 5px;
-
-  grid-row-start: 2;
-  grid-column-start: 4;
-
-  grid-row-end: 3;
-  grid-column-end: 6;
-
-}
-
-#item-6 {
-
-  background-image: url(/img/techno8.jpg);
-  background-size: cover;
-  margin: 10px;
-  border-radius: 5px;
-
-  grid-row-start: 3;
-  grid-column-start: 1;
-
-  grid-row-end: 4;
-  grid-column-end: 3;
-
-}
-
-#item-7 {
-
-  background-image: url(/img/naturatek.jpg);
-  background-size: cover;
-  margin: 10px;
-  border-radius: 5px;
-
-  grid-row-start: 3;
-  grid-column-start: 3;
-
-  grid-row-end: 4;
-  grid-column-end: 5;
-
-}
-
-#item-8 {
-
-  background-image: url(/img/techno.jpg);
-  background-size: cover;
-  margin: 10px;
-  border-radius: 5px;
-
-  grid-row-start: 3;
-  grid-column-start: 5;
-
-  grid-row-end: 4;
-  grid-column-end: 6;
-
 }
