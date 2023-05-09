@@ -46,7 +46,7 @@ tlMenuClose
   })
   .set(".menu-text", { textContent: "menu", color: "#201B1B" })
   .set(".menu-line", { backgroundColor: "#201B1B" })
-  .set(".logo img", { attr: { src: "/img/logo.png" } })
+  .set(".logo img", { attr: { src: "img/logo.png" } })
   .to(navMenu, { opacity: 0 })
   .to(navMenu, { visibility: "hidden" });
 
