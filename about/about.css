@@ -246,7 +246,7 @@ h1 {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    height: 400px;
+    height: 600px;
     width: 100%;
     margin-bottom: 50px;
 }
@@ -257,6 +257,7 @@ h1 {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 50px;
 }
 
 .about-content2-title {
@@ -272,7 +273,6 @@ h1 {
     font-size: 0.8rem;
     line-height: 1.2rem;
     width: 60%;
-    column-count: 2;
 }
 
 
@@ -370,4 +370,195 @@ footer {
 .footer-section-detail2 a {
     text-decoration: underline;
     color: #F5F5F5;
+}
+
+
+/* galerie grid */
+
+.angry-grid {
+    display: grid;
+
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    gap: 0px;
+    height: 150vh;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.img-grid {
+    position: relative;
+}
+
+.img-path {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #201b1b6b;
+    border-radius: 5px;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    transition: clip-path 0.5s ease-in-out;
+}
+
+.img-grid:hover>.img-path {
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
+
+.img-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #F5F5F5;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.7s ease-in-out;
+}
+
+.img-grid:hover>.img-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+#item-0 {
+
+    background-image: url(/img/techno2.jpg);
+    background-size: cover;
+    margin: 5px;
+    border-radius: 2px;
+
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    grid-row-end: 2;
+    grid-column-end: 3;
+
+}
+
+#item-1 {
+
+    background-image: url(/img/techno3.jpg);
+    background-size: cover;
+    margin: 5px;
+    border-radius: 2px;
+
+    grid-row-start: 1;
+    grid-column-start: 3;
+
+    grid-row-end: 2;
+    grid-column-end: 4;
+
+}
+
+#item-2 {
+
+    background-image: url(/img/techno4.jpg);
+    background-size: cover;
+    margin: 5px;
+    border-radius: 2px;
+
+    grid-row-start: 1;
+    grid-column-start: 4;
+
+    grid-row-end: 2;
+    grid-column-end: 6;
+
+}
+
+#item-3 {
+
+    background-image: url(/img/techno5.jpg);
+    background-size: cover;
+    margin: 5px;
+    border-radius: 2px;
+
+    grid-row-start: 2;
+    grid-column-start: 1;
+
+    grid-row-end: 3;
+    grid-column-end: 2;
+
+}
+
+#item-4 {
+
+    background-image: url(/img/techno6.jpg);
+    background-size: cover;
+    margin: 5px;
+    border-radius: 2px;
+
+    grid-row-start: 2;
+    grid-column-start: 2;
+
+    grid-row-end: 3;
+    grid-column-end: 4;
+
+}
+
+#item-5 {
+
+    background-image: url(/img/techno7.jpg);
+    background-size: cover;
+    margin: 5px;
+    border-radius: 2px;
+
+    grid-row-start: 2;
+    grid-column-start: 4;
+
+    grid-row-end: 3;
+    grid-column-end: 6;
+
+}
+
+#item-6 {
+
+    background-image: url(/img/techno8.jpg);
+    background-size: cover;
+    margin: 5px;
+    border-radius: 2px;
+
+    grid-row-start: 3;
+    grid-column-start: 1;
+
+    grid-row-end: 4;
+    grid-column-end: 3;
+
+}
+
+#item-7 {
+
+    background-image: url(/img/naturatek.jpg);
+    background-size: cover;
+    margin: 5px;
+    border-radius: 2px;
+
+    grid-row-start: 3;
+    grid-column-start: 3;
+
+    grid-row-end: 4;
+    grid-column-end: 5;
+
+}
+
+#item-8 {
+
+    background-image: url(/img/techno.jpg);
+    background-size: cover;
+    margin: 5px;
+    border-radius: 2px;
+
+    grid-row-start: 3;
+    grid-column-start: 5;
+
+    grid-row-end: 4;
+    grid-column-end: 6;
+
 }
