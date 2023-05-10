@@ -53,7 +53,7 @@ h1 {
 .navigation-img {
     width: 20vw;
     height: 40vh;
-    background-image: url(/img/elec.jpg);
+    background-image: url(../img/elec.jpg);
     background-size: cover;
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     transition: clip-path 1s;
