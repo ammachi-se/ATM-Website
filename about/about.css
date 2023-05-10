@@ -31,6 +31,7 @@ body {
     z-index: 9;
     font-family: 'Mattone';
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .navigation-content {
@@ -56,12 +57,6 @@ body {
     background-size: cover;
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     transition: clip-path 1s;
-}
-
-.word {
-    opacity: 0;
-    transform: translateY(5px);
-    transition: all 0.5s ease-in-out;
 }
 
 .navigation-medias {
@@ -93,8 +88,6 @@ body {
     font-size: 4vw;
     font-weight: 600;
     padding: 5px;
-
-
 }
 
 .navigation ul a {
@@ -124,11 +117,12 @@ body {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 10;
     margin-left: 2.5%;
     margin-right: 2.5%;
+    border-bottom: solid 1px #201b1b3b;
 }
 
 .logo {
@@ -171,6 +165,7 @@ body {
 
 .navbar-menu:hover .menu-text {
     font-size: 50%;
+    transition: font-size 0.5s ease-in-out;
 }
 
 .navbar-menu:hover .menu-btn {
@@ -280,13 +275,15 @@ h1 {
 
 /* Footer*/
 
+/* Footer*/
+
 footer {
     position: relative;
     display: flex;
     flex-wrap: nowrap;
     font-size: 0.8rem;
     font-weight: lighter;
-    margin-top: 100px;
+    margin-top: 50px;
     color: #F5F5F5;
 }
 
@@ -312,6 +309,7 @@ footer {
     padding: 50px 0 0 40px;
     transition: all 0.3s ease-in;
     margin-top: 200px;
+    border-right: solid 0.1px #f5f5f53a;
 }
 
 .footer-section:hover {
@@ -371,6 +369,7 @@ footer {
     text-decoration: underline;
     color: #F5F5F5;
 }
+
 
 
 /* galerie grid */
@@ -561,4 +560,11 @@ footer {
     grid-row-end: 4;
     grid-column-end: 6;
 
+}
+
+
+.word {
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all 0.5s ease-in-out;
 }

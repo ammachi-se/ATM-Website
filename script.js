@@ -19,7 +19,7 @@ tlMenuOpen
   .set(".menu-text", { textContent: "close" })
   .to(".menu-text", { color: "#F5F5F5" })
   .to(".menu-line", { backgroundColor: "#F5F5F5" }, "-=1")
-  .set(".logo img", { attr: { src: "/img/logo3.png" } }, "-=1")
+  .set(".logo img", { attr: { src: "img/logo3.png" } }, "-=1")
   .to(".navigation-img", { clipPath: 'polygon(0 100%, 100% 100%, 100% 0, 0 0)'})
   .to(".navigation-medias", { y: 0 , opacity: 1})
   .to(".word", { y: 0 , opacity: 1, stagger: 0.05, delay: 0.2}, "-=1")

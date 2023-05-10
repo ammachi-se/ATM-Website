@@ -60,6 +60,7 @@ h1 {
   margin-left: 2.5%;
   margin-right: 2.5%;
   height: 90vh;
+  margin-bottom: 100px;
 }
 
 .content-section {
@@ -92,17 +93,17 @@ h1 {
 
 .content-section-left ul li {
   font-family: 'Mattone';
-  font-size: 3vw;
+  font-size: 3.2vw;
   font-weight: bolder;
   cursor: pointer;
   padding: 0;
   width: fit-content;
-  color: #201b1b7a;
+  color: #201B1B;
   transition: all 0.5s ease;
 }
 
 .content-section-left ul li:hover {
-  color: #201B1B;
+  color: #201b1b7a;
   transform: translateX(10px);
 }
 
@@ -147,7 +148,7 @@ h1 {
 }
 
 .acc-title {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -161,9 +162,35 @@ ul {
   flex-basis: 50%;
 }
 
-.img {
+.img1 {
   flex-basis: 50%;
   background: url(/img/3abdelkader.png) 50% 50% no-repeat;
+  margin: 5px;
+}
+
+.img2 {
+  flex-basis: 50%;
+  background: url(/img/Clodo.png) no-repeat;
+  background-size: contain;
+  margin: 5px;
+}
+
+.img3 {
+  flex-basis: 50%;
+  background: url(/img/darkmate.jpg) no-repeat;
+  background-size: cover;
+  margin: 5px;
+}
+
+.img4 {
+  flex-basis: 50%;
+  background: url(/img/fael.jpeg) 50% 50% no-repeat;
+  margin: 5px;
+}
+
+.img6 {
+  flex-basis: 50%;
+  background: url(/img/Toxics.png) 50% 50% no-repeat;
   margin: 5px;
 }
 

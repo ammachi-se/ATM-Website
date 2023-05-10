@@ -102,7 +102,7 @@ body {
 }
 
 .podcast-title :nth-child(1) {
-    font-size: 2vw;
+    font-size: 3vw;
     font-weight: 600;
     font-family: 'Mattone';
 }
