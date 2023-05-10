@@ -52,7 +52,7 @@ body {
 .navigation-img {
     width: 20vw;
     height: 40vh;
-    background-image: url(/img/elec.jpg);
+    background-image: url(../img/elec.jpg);
     background-size: cover;
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     transition: clip-path 1s;
@@ -242,7 +242,7 @@ h1 {
 /* Parallax*/
 
 .parallax-section {
-    background-image: url(/img/techno9.jpg);
+    background-image: url(../img/techno9.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -297,7 +297,7 @@ footer {
     z-index: -1;
     width: 60%;
     height: 90%;
-    background-image: url(/img/alger7.jpg);
+    background-image: url(../img/alger7.jpg);
     background-size: cover;
     opacity: 0.8;
 }
@@ -382,9 +382,9 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
     gap: 0px;
-    height: 150vh;
-    margin-left: 10%;
-    margin-right: 10%;
+    height: 90vh;
+    margin-left: 15%;
+    margin-right: 15%;
 
 }
 
@@ -430,7 +430,7 @@ footer {
 
 #item-0 {
 
-    background-image: url(/img/techno2.jpg);
+    background-image: url(../img/techno2.jpg);
     background-size: cover;
     margin: 5px;
     border-radius: 2px;
@@ -445,7 +445,7 @@ footer {
 
 #item-1 {
 
-    background-image: url(/img/techno3.jpg);
+    background-image: url(../img/techno3.jpg);
     background-size: cover;
     margin: 5px;
     border-radius: 2px;
@@ -460,7 +460,7 @@ footer {
 
 #item-2 {
 
-    background-image: url(/img/techno4.jpg);
+    background-image: url(../img/techno4.jpg);
     background-size: cover;
     margin: 5px;
     border-radius: 2px;
@@ -475,7 +475,7 @@ footer {
 
 #item-3 {
 
-    background-image: url(/img/techno5.jpg);
+    background-image: url(../img/techno5.jpg);
     background-size: cover;
     margin: 5px;
     border-radius: 2px;
@@ -490,7 +490,7 @@ footer {
 
 #item-4 {
 
-    background-image: url(/img/techno6.jpg);
+    background-image: url(../img/techno6.jpg);
     background-size: cover;
     margin: 5px;
     border-radius: 2px;
@@ -505,7 +505,7 @@ footer {
 
 #item-5 {
 
-    background-image: url(/img/techno7.jpg);
+    background-image: url(../img/techno7.jpg);
     background-size: cover;
     margin: 5px;
     border-radius: 2px;
@@ -520,7 +520,7 @@ footer {
 
 #item-6 {
 
-    background-image: url(/img/techno8.jpg);
+    background-image: url(../img/techno8.jpg);
     background-size: cover;
     margin: 5px;
     border-radius: 2px;
@@ -535,7 +535,7 @@ footer {
 
 #item-7 {
 
-    background-image: url(/img/naturatek.jpg);
+    background-image: url(../img/naturatek.jpg);
     background-size: cover;
     margin: 5px;
     border-radius: 2px;
@@ -550,7 +550,7 @@ footer {
 
 #item-8 {
 
-    background-image: url(/img/techno.jpg);
+    background-image: url(../img/techno.jpg);
     background-size: cover;
     margin: 5px;
     border-radius: 2px;
