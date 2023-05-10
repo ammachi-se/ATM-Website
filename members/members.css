@@ -24,6 +24,8 @@ body {
   height: 100vh;
 }
 
+/* Navigation */
+
 .word {
   opacity: 0;
   transform: translateY(5px);
@@ -377,4 +379,3 @@ li:last-child {
 .heightZero {
   height: 0;
 }
-

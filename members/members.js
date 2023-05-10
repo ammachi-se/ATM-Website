@@ -40,6 +40,7 @@ let tl = gsap.timeline({
 
 
 // --------Animation des titres
+// --------Animation des titres
 
 // Récupérez toutes les images que vous souhaitez animer
 const images = document.querySelectorAll('.content-section-right img');
