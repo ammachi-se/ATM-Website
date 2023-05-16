@@ -240,3 +240,202 @@
             </a>
         </nav>
     </div>
+
+
+
+
+
+
+
+
+
+    ------------------------------
+
+    <div class="navigation">
+            <div class="navigation-content">
+                <div class="navigation-left">
+                    <div class="navigation-img"></div>
+                    <div class="navigation-medias">
+                        <div class="navigation-medias-link"><a href="https://www.facebook.com/groups/ALGERIAN-TECHNO-MOVEMENT-438802522869431/" target="_blank">Facebook</a></div>
+                        <div class="navigation-medias-link"><a href="https://www.instagram.com/algerian.techno.movement/" target="_blank">Instagram</a></div>
+                        <div class="navigation-medias-link"><a href="https://www.youtube.com/channel/UCq9Hn-rbWWK8g4MUnHOI9zQ" target="_blank">Youtube</a></div>
+                        <div class="navigation-medias-link"><a href="https://soundcloud.com/algeriantechnomovement" target="_blank">Soundcloud</a></div>
+                        <div class="navigation-medias-link"><a href="https://lkemia.bandcamp.com/" target="_blank">Bandcamp</a></div>
+                    </div>
+                    <div id="textNavigationReveal" class="navigation-text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, voluptatum. Ratione expedita ut dolore praesentium voluptatem eius sequi ducimus magni, perferendis rem nemo necessitatibus suscipit id animi molestias harum maiores.
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about/about.html">About Us</a></li>
+                    <li><a href="members/members.html">Members</a></li>
+                    <li><a href="podcast/podcast.html">Podcast</a></li>
+                    <li><a href="">Label</a></li>
+                    <li><a href="contact/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+/* Navigation */
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #201B1B;
+    color: #F5F5F5;
+    z-index: 9;
+    font-family: 'Mattone';
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navigation-content {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+
+.navigation-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+}
+
+.navigation-img {
+    width: 20vw;
+    height: 40vh;
+    background-image: url(img/elec.jpg);
+    background-size: cover;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    transition: clip-path 1s;
+}
+
+.navigation-medias {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    cursor: pointer;
+    color: #F5F5F5;
+    font-size: 0.6rem;
+    gap: 5px;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.navigation-medias a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #F5F5F5;
+}
+
+
+.navigation ul {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.navigation ul li {
+    list-style: none;
+    font-size: 4vw;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.navigation ul a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #F5F5F5;
+}
+
+.navigation p {
+    font-size: 0.8rem;
+}
+
+.navigation-text {
+    font-family: 'Familjen Grotesk';
+    font-size: 0.6rem;
+}
+
+
+
+
+const navMenu = document.querySelector(".navigation");
+const menuBtn = document.querySelector(".menu-btn");
+const textNavigationReveal = new SplitType('#textNavigationReveal', { types: 'words' });
+
+
+// masquer la navigation par défaut
+gsap.set(navMenu, { visibility: "hidden", opacity: 0 });
+
+// timeline pour l'animation d'ouverture
+const tlMenuOpen = gsap.timeline({
+  paused: true,
+  defaults: { duration: 0.5, ease: "Power4.easeOut" }
+});
+
+tlMenuOpen
+  .to(navMenu, { visibility: "visible" })
+  .to(navMenu, { opacity: 1 })
+  .set(".menu-btn", { background: "none" })
+  .set(".menu-text", { textContent: "close" })
+  .to(".menu-text", { color: "#F5F5F5" })
+  .to(".menu-line", { backgroundColor: "#F5F5F5" }, "-=1")
+  .set(".logo img", { attr: { src: "img/logo3.png" } }, "-=1")
+  .to(".navigation-img", { clipPath: 'polygon(0 100%, 100% 100%, 100% 0, 0 0)'})
+  .to(".navigation-medias", { y: 0 , opacity: 1})
+  .to(".word", { y: 0 , opacity: 1, stagger: 0.05, delay: 0.2}, "-=1")
+  .from(".navigation ul li", {
+    opacity: 0,
+    y: 10,
+    stagger: 0.2
+  });
+
+// timeline pour l'animation de fermeture
+const tlMenuClose = gsap.timeline({
+  paused: true,
+  defaults: { duration: 0.5, ease: "Power4.easeIn" }
+});
+
+tlMenuClose
+  .to(".word", { y: 5 , opacity: 0, stagger: 0.05, delay: 0.2})
+  .to(".navigation-medias", { y: 10 , opacity: 0})
+  .to(".navigation-img", { clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'})
+  .to(".navigation ul li", {
+    y: 10,
+    opacity: 0,
+    stagger: -0.2
+  })
+  .set(".menu-text", { textContent: "menu", color: "#201B1B" })
+  .set(".menu-line", { backgroundColor: "#201B1B" })
+  .set(".logo img", { attr: { src: "img/logo.png" } })
+  .to(navMenu, { opacity: 0 })
+  .to(navMenu, { visibility: "hidden" });
+
+
+
+
+// gestion des clics sur le bouton du menu pour ouvrir/fermer l'animation
+menuBtn.addEventListener("click", () => {
+  if (tlMenuOpen.isActive() || tlMenuClose.isActive()) {
+    return false;
+  }
+
+  if (navMenu.classList.contains("is-active")) {
+    tlMenuClose.restart().play();
+    navMenu.classList.remove("is-active");
+  } else {
+    tlMenuOpen.restart().play();
+    navMenu.classList.add("is-active");
+  }
+});
+
+
+
