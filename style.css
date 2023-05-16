@@ -204,6 +204,21 @@ body {
     background: #F5F5F5;
 }
 
+.navbar-list-sticky ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #F5F5F5;
+    transition: width 0.5s ease-in-out;
+    border-radius: 5px;
+    transform: translateY(5px);
+}
+
+.navbar-list-sticky ul li a:hover::after {
+    width: 100%;
+}
+
 
 /* Hero */
 
