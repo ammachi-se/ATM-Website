@@ -304,6 +304,7 @@ ul {
 .img1 {
   flex-basis: 50%;
   background: url(../img/3abdelkader.png) 50% 50% no-repeat;
+  background-size: contain;
   margin: 5px;
 }
 
