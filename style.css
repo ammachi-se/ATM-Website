@@ -84,24 +84,8 @@ body {
 
 .hero-white-block {
     position: absolute;
-    bottom: 20%;
-    left: 3%;
-    width: 500px;
-    height: 100px;
-    border-radius: 50px;
-    background: url(img/xavo.jpg) 50% 20% no-repeat;
-    background-size: cover;
-}
-
-.hero-white-block img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.2s ease-in-out;
-}
-
-.hero-white-block img:hover {
-    transform: scale(0.9);
+    bottom: 40%;
+    left: 2.5%;
 }
 
 
@@ -159,7 +143,7 @@ body {
 
 .bar{
     height: 20px;
-    width: 2px;
+    width: 1px;
     background: #201B1B;
 }
 
@@ -216,7 +200,7 @@ body {
 
 .bar-sticky{
     height: 20px;
-    width: 2px;
+    width: 1px;
     background: #F5F5F5;
 }
 
