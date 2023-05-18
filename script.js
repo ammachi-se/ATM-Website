@@ -107,18 +107,38 @@ var $cursor = $(".cursor"),
 
 
       
-//Navbar sticky
+// Navbar sticky animation
 
 var navbarSticky = document.querySelector('.navbar-sticky');
 var windowHeight = window.innerHeight;
 var scrollThreshold = 0.3 * windowHeight;
+var home = document.querySelector('.home');
+var footer = document.querySelector('.footer');
 
 window.addEventListener('scroll', function() {
-  if (window.scrollY >= scrollThreshold) {
+  var scrollPosition = window.scrollY;
+
+  // Navbar animation
+  if (scrollPosition >= scrollThreshold) {
     navbarSticky.style.visibility = 'visible';
     navbarSticky.style.transition = 'transform 0.3s ease';
     navbarSticky.style.transform = 'translateY(0)';
   } else {
+    navbarSticky.style.transition = 'transform 0.3s ease';
+    navbarSticky.style.transform = 'translateY(-100%)';
+  }
+
+  // Disappear at the end of .home
+  var homeOffset = home.offsetTop + home.offsetHeight;
+  if (scrollPosition >= homeOffset) {
+    navbarSticky.style.transition = 'transform 0.3s ease';
+    navbarSticky.style.transform = 'translateY(-100%)';
+  }
+
+  // Disappear on footer
+  var footerOffset = footer.offsetTop;
+  var footerPosition = scrollPosition + windowHeight;
+  if (footerPosition >= footerOffset) {
     navbarSticky.style.transition = 'transform 0.3s ease';
     navbarSticky.style.transform = 'translateY(-100%)';
   }
